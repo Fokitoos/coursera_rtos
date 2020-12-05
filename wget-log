@@ -1,0 +1,6 @@
+--2020-12-05 23:29:04--  https://d3c33hcgiwev3.cloudfront.net/xCTu2Q_dR--k7tkP3Wfv8A_e2a75bad8b0f47bd87067dcacdd0d1fe_incdecthread.zip?Expires=1607299200
+Resolving d3c33hcgiwev3.cloudfront.net (d3c33hcgiwev3.cloudfront.net)... 52.222.136.30, 52.222.136.227, 52.222.136.42, ...
+Connecting to d3c33hcgiwev3.cloudfront.net (d3c33hcgiwev3.cloudfront.net)|52.222.136.30|:443... connected.
+HTTP request sent, awaiting response... 403 Forbidden
+2020-12-05 23:29:04 ERROR 403: Forbidden.
+

@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <sched.h>
 
-#define NUM_THREADS 64
+#define NUM_THREADS 1
 
 typedef struct
 {
@@ -25,9 +25,14 @@ void *counterThread(void *threadp)
     for(i=1; i < (threadParams->threadIdx)+1; i++)
         sum=sum+i;
  
-    printf("Thread idx=%d, sum[1...%d]=%d\n", 
+    printf("Thread idx=%d, sum[0...%d]=%d\n", 
            threadParams->threadIdx,
            threadParams->threadIdx, sum);
+
+    FILE *fp;
+
+    fp = popen("logger '[COURSE:1][ASSIGNMENT:1] Hello World from Thread!'","r");
+    pclose(fp);
 }
 
 
@@ -35,8 +40,14 @@ int main (int argc, char *argv[])
 {
    int rc;
    int i;
+   FILE *fp;
 
-   for(i=1; i <= NUM_THREADS; i++)
+   fp = popen("logger \"[COURSE:1][ASSIGNMENT:1] `uname -a`\"","r");
+   
+   fp = popen("logger '[COURSE:1][ASSIGNMENT:1] Hello World from main()!'","r");
+   pclose(fp);
+
+   for(i=0; i < NUM_THREADS; i++)
    {
        threadParams[i].threadIdx=i;
 
@@ -45,6 +56,7 @@ int main (int argc, char *argv[])
                       counterThread, // thread function entry point
                       (void *)&(threadParams[i]) // parameters to pass in
                      );
+
    }
 
    for(i=0;i<NUM_THREADS;i++)

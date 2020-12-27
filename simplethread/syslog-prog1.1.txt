@@ -1,0 +1,4 @@
+Dec  6 23:27:22 ubuntu ubuntu: [COURSE:1][ASSIGNMENT:1] Linux ubuntu 5.4.0-1023-raspi #26-Ubuntu SMP PREEMPT Thu Nov 12 14:58:33 UTC 2020 aarch64 aarch64 aarch64 GNU/Linux
+Dec  6 23:27:22 ubuntu ubuntu: [COURSE:1][ASSIGNMENT:1] Hello World from main!
+Dec  6 23:27:22 ubuntu ubuntu: [COURSE:1][ASSIGNMENT:1] Hello World from Thread!
+
